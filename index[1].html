@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fadhili Manyasa | Portfolio</title>
+  <style>
+    :root {
+      --bg-color: #f7f9fc;
+      --text-color: #333;
+      --primary: #0078ff;
+      --card-bg: #fff;
+    }
+
+    body.dark {
+      --bg-color: #121212;
+      --text-color: #e0e0e0;
+      --card-bg: #1e1e1e;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      transition: all 0.3s ease;
+    }
+
+    header {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: linear-gradient(135deg, var(--primary), #00c6ff);
+      color: white;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      animation: fadeInDown 1s ease;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+      animation: fadeInUp 1s ease;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background: var(--card-bg);
+      padding: 0.8rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: var(--text-color);
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    .theme-toggle {
+      position: absolute;
+      right: 20px;
+      top: 15px;
+      cursor: pointer;
+      background: none;
+      border: 2px solid white;
+      color: white;
+      border-radius: 30px;
+      padding: 5px 15px;
+      font-size: 0.9rem;
+      transition: 0.3s;
+    }
+
+    .theme-toggle:hover {
+      background: white;
+      color: var(--primary);
+    }
+
+    section {
+      padding: 3rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    #about {
+      text-align: center;
+      animation: fadeInUp 1s ease;
+    }
+
+    #about img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      margin-top: 1rem;
+      border: 3px solid var(--primary);
+    }
+
+    #projects {
+      animation: fadeInUp 1s ease;
+    }
+
+    .project {
+      background: var(--card-bg);
+      padding: 1rem 1.5rem;
+      border-radius: 10px;
+      margin: 1.2rem 0;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .project h3 {
+      color: var(--primary);
+    }
+
+    #contact {
+      text-align: center;
+    }
+
+    #contact a {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      background: var(--primary);
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    #contact a:hover {
+      background: #005fc2;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: var(--primary);
+      color: white;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+      }
+
+      nav a {
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <button class="theme-toggle" id="themeToggle">🌙 Dark Mode</button>
+    <h1>Fadhili Manyasa</h1>
+    <p>Computer Science Student | Software Developer | Tech Enthusiast</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <img src="your-photo.jpg" alt="Your Photo">
+    <p>
+      Hi, I’m <strong>Fadhili Manyasa</strong> — a passionate computer science student who loves
+      building clean, creative, and functional digital experiences.  
+      I enjoy web development, programming, and exploring new technologies like AI and cloud computing.
+    </p>
+  </section>
+
+  <section id="projects">
+    <h2>My Projects</h2>
+
+    <div class="project">
+      <h3>💻 Student Result Management System</h3>
+      <p>A C++ project that allows teachers to record, manage, and display student performance efficiently.</p>
+    </div>
+
+    <div class="project">
+      <h3>🌐 Portfolio Website</h3>
+      <p>This personal website built with HTML, CSS, and JavaScript showcases my skills and journey in tech.</p>
+    </div>
+
+    <div class="project">
+      <h3>📱 Smart Study App</h3>
+      <p>A mobile app concept designed to help students schedule tasks and collaborate on academic projects.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>I'd love to hear from you! Connect with me below:</p>
+    <a href="mailto:your-email@example.com">📧 Email</a>
+    <a href="https://github.com/your-github">💻 GitHub</a>
+    <a href="https://linkedin.com/in/your-linkedin">🔗 LinkedIn</a>
+  </section>
+
+  <footer>
+    <p>© 2025 Fadhili Manyasa | Built with 💙 HTML, CSS & JS</p>
+  </footer>
+
+  <script>
+    const toggleBtn = document.getElementById('themeToggle');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      toggleBtn.textContent =
+        document.body.classList.contains('dark') ? '☀️ Light Mode' : '🌙 Dark Mode';
+    });
+  </script>
+</body>
+</html>
